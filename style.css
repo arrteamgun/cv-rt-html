@@ -185,11 +185,6 @@ a[href^=tel] {
 	color: #cf8a05;
 }
 
-#contactDetails span {
-	display: inline-block;
-	width: 25px;
-	/* Ширина для выравнивания по знаку двоеточия */
-}
 
 
 section {
@@ -228,10 +223,17 @@ section:last-child {
 	margin-bottom: -2px;
 }
 
+.sectionContent h3 {
+	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+	font-size: 1.2em;
+	margin-bottom: 8px;
+}
+
 .subDetails {
 	font-size: 0.8em;
 	font-style: italic;
-	margin-bottom: 3px;
+	margin-bottom: 10px;
+
 }
 
 .keySkills {
