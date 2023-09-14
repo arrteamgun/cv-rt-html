@@ -277,7 +277,7 @@ section:last-child {
 	#contactDetails {
 		float: none;
 		width: 100%;
-		text-align: center;
+		text-align: left;
 	}
 
 	.sectionTitle,
