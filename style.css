@@ -91,9 +91,9 @@ section {
 
 html,
 body {
-	background: #181818;
-	font-family: 'Lato', helvetica, arial, sans-serif;
-	font-size: 16px;
+	background: white;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 14px;
 	color: #222;
 }
 
@@ -104,7 +104,6 @@ body {
 p {
 	font-size: 1em;
 	line-height: 1.4em;
-	margin-bottom: 20px;
 	color: #444;
 }
 
@@ -112,30 +111,33 @@ p {
 	width: 90%;
 	max-width: 800px;
 	background: #f3f3f3;
-	margin: 30px auto;
+	margin: 0 auto;
 }
 
 .mainDetails {
-	padding: 25px 35px;
-	border-bottom: 2px solid #cf8a05;
-	background: #ededed;
+	display: flex;
+	grid-template-columns: 1.2fr 1fr;
+	width: 100%;
+	background: #bfd4d7;
+	padding: 1rem 1.5rem 1rem 1.5rem;
+	box-sizing: border-box;
+	box-shadow: 0px 6.3px 10px rgba(0, 0, 0, 0.035), 0px 50px 80px rgba(0, 0, 0, 0.07);
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 
 #name h1 {
-	font-size: 2.5em;
-	font-weight: 700;
-	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
-	margin-bottom: -6px;
+	font-size: 2em;
+	font-weight: 500;
+	margin-bottom: -2px;
 }
 
 #name h2 {
-	font-size: 2em;
-	margin-left: 2px;
-	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+	font-size: 1.4em;
 }
 
 #mainArea {
-	padding: 0 40px;
+	padding: 0 20px;
 }
 
 #headshot {
@@ -156,13 +158,18 @@ p {
 }
 
 #contactDetails {
-	float: right;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-size: 0.8rem;
+	margin-top: 1rem;
+	margin-right: 8rem;
+	justify-content: space-between;
 }
 
 #contactDetails ul {
 	list-style-type: none;
-	font-size: 0.9em;
-	margin-top: 2px;
+	font-size: 0.8em;
 }
 
 #contactDetails ul li {
@@ -189,7 +196,7 @@ a[href^=tel] {
 
 section {
 	border-top: 1px solid #dedede;
-	padding: 20px 0 0;
+	padding: 10px 0 0;
 }
 
 section:first-child {
@@ -200,31 +207,18 @@ section:last-child {
 	padding: 20px 0 10px;
 }
 
-.sectionTitle {
-	float: left;
-	width: 25%;
-}
-
-.sectionContent {
-	float: right;
-	width: 72.5%;
-}
 
 .sectionTitle h1 {
-	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
-	font-style: italic;
-	font-size: 1.5em;
+	font-size: 1.2em;
 	color: #cf8a05;
 }
 
 .sectionContent h2 {
-	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
-	font-size: 1.5em;
+	font-size: 1.2em;
 	margin-bottom: -2px;
 }
 
 .sectionContent h3 {
-	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
 	font-size: 1.2em;
 	margin-bottom: 8px;
 }
@@ -248,6 +242,51 @@ section:last-child {
 
 .keySkills ul li {
 	margin-bottom: 3px;
+}
+
+.link {
+	align-items: center;
+	display: flex;
+	cursor: pointer;
+	font-size: 1rem;
+}
+
+.link a {
+	color: #243c49;
+	display: flex;
+	align-items: center;
+}
+
+.additional-info {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 5rem;
+}
+
+.education-container {
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: space-between;
+}
+
+.tag {
+	padding: 2px 5px;
+	background-color: rgba(176, 196, 222, 0.8);
+	border-radius: 4px;
+	display: inline-block;
+	margin-right: 2px;
+}
+
+.skill-list-wrapper {
+	display: grid;
+	grid-template-rows: auto auto;
+	gap: 0.4rem;
+	padding: 0.3em 0 0 0;
+}
+
+.workplace {
+	display: flex;
+	flex-direction: column;
 }
 
 @media all and (min-width: 602px) and (max-width: 800px) {
@@ -300,7 +339,7 @@ section:last-child {
 
 @media all and (max-width: 480px) {
 	.mainDetails {
-		padding: 15px 15px;
+		padding: 5px 10px;
 	}
 
 	section {
@@ -308,7 +347,7 @@ section:last-child {
 	}
 
 	#mainArea {
-		padding: 0 25px;
+		padding: 0 10px;
 	}
 
 
