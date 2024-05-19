@@ -116,10 +116,11 @@ p {
 
 .mainDetails {
 	display: flex;
+	flex-direction: column;
 	grid-template-columns: 1.2fr 1fr;
 	width: 100%;
 	background: #bfd4d7;
-	padding: 1rem 1.5rem 1rem 1.5rem;
+	padding: 0.5rem 1.5rem 0.5rem 1.5rem;
 	box-sizing: border-box;
 	box-shadow: 0px 6.3px 10px rgba(0, 0, 0, 0.035), 0px 50px 80px rgba(0, 0, 0, 0.07);
 	border-bottom-left-radius: 5px;
@@ -155,6 +156,10 @@ p {
 
 #name {
 	float: left;
+}
+
+#contactDetailsMobile {
+	display: none;
 }
 
 #contactDetails {
@@ -195,7 +200,6 @@ a[href^=tel] {
 
 
 section {
-	border-top: 1px solid #dedede;
 	padding: 10px 0 0;
 }
 
@@ -251,6 +255,21 @@ section:last-child {
 	font-size: 1rem;
 }
 
+.additionalHeader {
+	font-size: 1.25em;
+	margin-bottom: 0.5rem;
+}
+
+.languageGrid {
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-content: start;
+}
+
+.language {}
+
+.languagePro {}
+
 .link a {
 	color: #243c49;
 	display: flex;
@@ -260,7 +279,8 @@ section:last-child {
 .additional-info {
 	display: grid;
 	grid-template-columns: 1fr 2fr;
-	gap: 5rem;
+	gap: 2rem;
+	margin-right: 1rem;
 }
 
 .education-container {
@@ -277,6 +297,10 @@ section:last-child {
 	margin-right: 2px;
 }
 
+.skillHeader {
+	font-size: 1.5rem;
+}
+
 .skill-list-wrapper {
 	display: grid;
 	grid-template-rows: auto auto;
@@ -289,19 +313,9 @@ section:last-child {
 	flex-direction: column;
 }
 
-@media all and (min-width: 602px) and (max-width: 800px) {
-	#headshot {
-		display: none;
-	}
 
-	.keySkills {
-		-moz-column-count: 2;
-		-webkit-column-count: 2;
-		column-count: 2;
-	}
-}
 
-@media all and (max-width: 601px) {
+@media all and (max-width: 1000px) {
 	#cv {
 		width: 95%;
 		margin: 10px auto;
@@ -312,9 +326,34 @@ section:last-child {
 		display: none;
 	}
 
-	#name,
+	.nameSkills {
+		display: grid;
+		grid-template-columns: auto;
+		gap: 1rem;
+		border-bottom: solid;
+	}
+
+	.skill-list-wrapper {
+		margin-bottom: 1rem;
+	}
+
+
+
+	#name {
+		float: left;
+	}
+
 	#contactDetails {
+		display: none;
 		float: none;
+		width: 100%;
+		text-align: left;
+	}
+
+
+	#contactDetailsMobile {
+		display: grid;
+		grid-template-columns: auto auto;
 		width: 100%;
 		text-align: left;
 	}
@@ -335,33 +374,13 @@ section:last-child {
 		-webkit-column-count: 2;
 		column-count: 2;
 	}
-}
 
-@media all and (max-width: 480px) {
 	.mainDetails {
-		padding: 5px 10px;
-	}
-
-	section {
-		padding: 15px 0 0;
-	}
-
-	#mainArea {
-		padding: 0 10px;
-	}
-
-
-	.keySkills {
-		-moz-column-count: 1;
-		-webkit-column-count: 1;
-		column-count: 1;
-	}
-
-	#name h1 {
-		line-height: .8em;
-		margin-bottom: 4px;
+		gap: 1rem;
 	}
 }
+
+
 
 @media print {
 	#cv {
