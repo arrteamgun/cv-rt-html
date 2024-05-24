@@ -95,6 +95,8 @@ body {
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 14px;
 	color: #222;
+	-webkit-print-color-adjust: exact !important;
+	print-color-adjust: exact !important;
 }
 
 .clear {
@@ -109,7 +111,7 @@ p {
 
 #cv {
 	width: 90%;
-	max-width: 800px;
+	max-width: 1024px;
 	background: #f3f3f3;
 	margin: 0 auto;
 }
@@ -222,6 +224,7 @@ section:last-child {
 .sectionTitle h1 {
 	font-size: 1.2em;
 	color: #cf8a05;
+	margin-bottom: 3px;
 }
 
 .sectionContent h2 {
@@ -235,6 +238,17 @@ section:last-child {
 }
 
 .subDetails {
+	font-size: 0.8em;
+	font-style: italic;
+}
+
+.subDetailsEd {
+	font-size: 0.8em;
+	font-style: italic;
+}
+
+.subDetailsMobile {
+	display: none;
 	font-size: 0.8em;
 	font-style: italic;
 }
@@ -284,14 +298,13 @@ section:last-child {
 .additional-info {
 	display: grid;
 	grid-template-columns: 1fr 2fr;
-	gap: 2rem;
+	gap: 8rem;
 	margin-right: 1rem;
 }
 
 .education-container {
 	display: grid;
-	grid-template-columns: auto auto;
-	justify-content: space-between;
+	grid-template-columns: 0.5fr 1fr;
 }
 
 .tag {
@@ -319,15 +332,18 @@ section:last-child {
 }
 
 .workplaceTitle {
+	display: grid;
+	grid-template-columns: 2fr 0.8fr;
 	border-top: 2px solid;
 	border-bottom: 2px solid;
 	border-left: 2px solid;
 	padding-left: 5px;
+	padding-right: 10px;
 }
 
 .nameSkills {
 	display: grid;
-	grid-template-columns: auto auto;
+	grid-template-columns: 1fr 1fr;
 }
 
 
@@ -343,14 +359,22 @@ section:last-child {
 	}
 
 	.nameSkills {
-		display: grid;
+		/* display: grid;
 		grid-template-columns: auto;
 		gap: 1rem;
-		border-bottom: solid;
+		border-bottom: solid; */
 	}
 
 	.skill-list-wrapper {
 		margin-bottom: 1rem;
+	}
+
+	.subDetails {
+		display: none;
+	}
+
+	.subDetailsMobile {
+		display: grid;
 	}
 
 
@@ -393,6 +417,10 @@ section:last-child {
 
 	.mainDetails {
 		gap: 1rem;
+	}
+
+	.workplaceTitle {
+		grid-template-columns: 2fr 0.6fr;
 	}
 }
 
